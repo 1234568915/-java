@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class kalkulator {
+    public static void main(String[] args) {
+        double a;
+        double b;
+        double c;
+        char op;
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Введите два числа: ");
+        System.out.print("a = "); a = reader.nextDouble();
+        System.out.print("b = "); b = reader.nextDouble();
+        System.out.print("Выберите действие (+, -, *, /): ");
+        op = reader.next().charAt(0);
+        switch(op) {
+            case '+': c = a + b;
+                break;
+            case '-': c = a - b;
+                break;
+            case '*': c = a * b;
+                break;
+            case '/': c = a / b;
+                break;
+            default:  System.out.println("ОШИБКА!!! ВЫБЕРИТЕ ПРАВИЛЬНУЮ ОПЕРАЦИЮ");
+                return;
+        }
+        System.out.print("Ваш результат ");
+        System.out.printf(a + " " + op + " " + b + " = " + c);
+    }
+}
